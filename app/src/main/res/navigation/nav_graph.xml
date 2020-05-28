@@ -8,6 +8,6 @@
     <fragment
         tools:layout="@layout/fragment_overview_repos"
         android:id="@+id/overviewReposFragment"
-        android:name="com.example.trendingrepos.ui.OverviewReposFragment"
+        android:name="com.example.trendingrepos.ui.overview.OverviewReposFragment"
         android:label="OverviewReposFragment" />
 </navigation>
