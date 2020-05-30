@@ -14,7 +14,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:layout_marginBottom="16dp"
         app:cardCornerRadius="0dp"
         app:cardElevation="5dp">
 
@@ -43,7 +42,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAlignment="viewStart"
-                android:textColor="@android:color/black"
+                android:textColor="#303030"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="@id/left_well"
@@ -58,7 +57,7 @@
                 android:maxLines="2"
                 android:textAlignment="viewStart"
                 android:textAllCaps="false"
-                android:textColor="@android:color/black"
+                android:textColor="#303030"
                 android:textSize="14sp"
                 app:descriptionText="@{repositoryItem}"
                 app:layout_constraintEnd_toEndOf="@id/right_well"
@@ -68,8 +67,8 @@
 
             <ImageView
                 android:id="@+id/user_avatar_image"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
                 android:layout_marginTop="16dp"
                 android:contentDescription="@string/user_profile_picture_description"
                 app:layout_constraintStart_toStartOf="@+id/left_well"
@@ -83,15 +82,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:textColor="@android:color/black"
+                android:textColor="#303030"
                 app:layout_constraintStart_toEndOf="@+id/user_avatar_image"
                 app:layout_constraintTop_toTopOf="@+id/user_avatar_image"
                 tools:text="@tools:sample/first_names" />
 
             <ImageView
                 android:id="@+id/repo_star_image"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
                 android:layout_marginEnd="4dp"
                 android:contentDescription="@string/star_image_of_repo_description"
                 app:layout_constraintBottom_toBottomOf="@+id/stars_count_text"
@@ -103,7 +102,7 @@
                 android:id="@+id/stars_count_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@android:color/black"
+                android:textColor="#303030"
                 android:textStyle="bold"
                 app:layout_constraintBaseline_toBaselineOf="@+id/username_text"
                 app:layout_constraintEnd_toEndOf="@+id/right_well"

@@ -17,6 +17,7 @@
 
 
         <androidx.recyclerview.widget.RecyclerView
+            android:background="@color/colorBackGround"
             android:id="@+id/repo_recycler_list"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
