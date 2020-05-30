@@ -21,7 +21,7 @@ class OverviewReposFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val binding = FragmentOverviewReposBinding.inflate(inflater, container, false)
-
+        binding.lifecycleOwner = this
         val adapter = RepositoryAdapter()
         binding.repoRecyclerList.adapter = adapter
 
@@ -36,8 +36,12 @@ class OverviewReposFragment : Fragment() {
         ).get(OverviewViewModel::class.java)
 
         viewModel.results.observe(viewLifecycleOwner, Observer {
-            Log.i("OverViewFragment","List of results : ${it.size}")
+            Log.i("OverViewFragment", "List of results : ${it.size}")
         })
+
+        binding.viewModel = viewModel
+
+
         return (binding.root)
     }
 

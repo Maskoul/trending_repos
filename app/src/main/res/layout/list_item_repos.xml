@@ -3,6 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
+
+        <variable
+            name="repositoryItem"
+            type="com.example.trendingrepos.domain.Repository" />
+    </data>
+
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -41,6 +48,7 @@
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="@id/left_well"
                 app:layout_constraintTop_toTopOf="parent"
+                app:titleText="@{repositoryItem}"
                 tools:text="@tools:sample/lorem" />
 
             <TextView
@@ -52,10 +60,11 @@
                 android:textAllCaps="false"
                 android:textColor="@android:color/black"
                 android:textSize="14sp"
+                app:descriptionText="@{repositoryItem}"
                 app:layout_constraintEnd_toEndOf="@id/right_well"
                 app:layout_constraintStart_toStartOf="@+id/left_well"
                 app:layout_constraintTop_toBottomOf="@+id/repo_title_text"
-                tools:text="er" />
+                tools:text="@tools:sample/lorem/random" />
 
             <ImageView
                 android:id="@+id/user_avatar_image"
@@ -69,6 +78,7 @@
 
             <TextView
                 android:id="@+id/username_text"
+                usernameText="@{repositoryItem}"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -96,6 +106,7 @@
                 android:textStyle="bold"
                 app:layout_constraintBaseline_toBaselineOf="@+id/username_text"
                 app:layout_constraintEnd_toEndOf="@+id/right_well"
+                app:starsCountText="@{repositoryItem}"
                 tools:text="2.8k" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.card.MaterialCardView>

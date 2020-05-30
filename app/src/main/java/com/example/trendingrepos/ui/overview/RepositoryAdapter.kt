@@ -5,7 +5,6 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.example.trendingrepos.R
 import com.example.trendingrepos.databinding.ListItemReposBinding
 import com.example.trendingrepos.domain.Repository
 
@@ -24,13 +23,20 @@ class RepositoryAdapter : ListAdapter<Repository, RepositoryAdapter.MyViewHolder
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val inflater = LayoutInflater.from(parent.context)
-        return MyViewHolder(ListItemReposBinding.inflate(inflater,parent, false))
+        return MyViewHolder(ListItemReposBinding.inflate(inflater, parent, false))
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-
+        val item = getItem(position)
+        holder.bind(item)
     }
 
-    class MyViewHolder(private val binding: ListItemReposBinding) :
-        RecyclerView.ViewHolder(binding.root)
+    class MyViewHolder(private var binding: ListItemReposBinding) :
+        RecyclerView.ViewHolder(binding.root) {
+        fun bind(repository: Repository) {
+            binding.repositoryItem = repository
+            binding.executePendingBindings()
+        }
+    }
+
 }
