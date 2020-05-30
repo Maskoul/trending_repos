@@ -1,8 +1,10 @@
 package com.example.trendingrepos.Util
 
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.trendingrepos.domain.Repository
 import com.example.trendingrepos.ui.overview.RepositoryAdapter
 
@@ -30,4 +32,11 @@ fun TextView.bindUsernameText(repository: Repository) {
 @BindingAdapter("starsCountText")
 fun TextView.bindStarsCountText(repository: Repository) {
     this.text = repository.stars.toString()
+}
+
+@BindingAdapter("profileImage")
+fun ImageView.bindprofileImg(repository: Repository) {
+    Glide.with(this.context)
+        .load(repository.profilePicture)
+        .into(this)
 }
