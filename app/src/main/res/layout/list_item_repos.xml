@@ -41,28 +41,21 @@
                 android:id="@+id/repo_title_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAlignment="viewStart"
-                android:textColor="#303030"
-                android:textSize="20sp"
-                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="@id/left_well"
                 app:layout_constraintTop_toTopOf="parent"
                 app:titleText="@{repositoryItem}"
+                style="@style/textTitleStyle"
                 tools:text="@tools:sample/lorem" />
 
             <TextView
                 android:id="@+id/repo_description_text"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:maxLines="2"
-                android:textAlignment="viewStart"
-                android:textAllCaps="false"
-                android:textColor="#303030"
-                android:textSize="14sp"
                 app:descriptionText="@{repositoryItem}"
                 app:layout_constraintEnd_toEndOf="@id/right_well"
                 app:layout_constraintStart_toStartOf="@+id/left_well"
                 app:layout_constraintTop_toBottomOf="@+id/repo_title_text"
+                style="@style/descriptionTextStyle"
                 tools:text="@tools:sample/lorem/random" />
 
             <ImageView
@@ -77,14 +70,15 @@
                 tools:srcCompat="@tools:sample/avatars" />
 
             <TextView
+
                 android:id="@+id/username_text"
                 usernameText="@{repositoryItem}"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:textColor="#303030"
                 app:layout_constraintStart_toEndOf="@+id/user_avatar_image"
                 app:layout_constraintTop_toTopOf="@+id/user_avatar_image"
+                style="@style/usernameTextStyle"
                 tools:text="@tools:sample/first_names" />
 
             <ImageView
@@ -102,11 +96,10 @@
                 android:id="@+id/stars_count_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="#303030"
-                android:textStyle="bold"
                 app:layout_constraintBaseline_toBaselineOf="@+id/username_text"
                 app:layout_constraintEnd_toEndOf="@+id/right_well"
                 app:starsCountText="@{repositoryItem}"
+                style="@style/starsCountTextStyle"
                 tools:text="2.8k" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.card.MaterialCardView>

@@ -5,4 +5,8 @@
     <color name="colorPrimaryLight">#A8DADC</color>
     <color name="colorBackGround">#F1FAEE</color>
     <color name="colorAccent">#E63946</color>
+
+
+    <color name="textBlackColor">#1E1E1E</color>
+    <color name="B">@android:color/black</color>
 </resources>
