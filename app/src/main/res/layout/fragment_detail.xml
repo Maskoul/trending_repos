@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.detail.DetailFragment">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="8dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="8dp" />
+
+        <TextView
+            android:id="@+id/detail_title_text"
+            style="@style/textTitleStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="@+id/left"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@tools:sample/lorem" />
+
+        <TextView
+            android:id="@+id/detail_description_text"
+            style="@style/descriptionTextStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/right"
+            app:layout_constraintStart_toStartOf="@+id/left"
+            app:layout_constraintTop_toBottomOf="@+id/detail_title_text"
+            tools:text="@tools:sample/lorem/random" />
+
+        <ImageView
+            android:id="@+id/detail_profile_img"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@string/user_profile_picture_description"
+            app:layout_constraintStart_toStartOf="@+id/left"
+            app:layout_constraintTop_toBottomOf="@+id/detail_description_text"
+            tools:src="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/detail_username_text"
+            style="@style/usernameTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/detail_profile_img"
+            app:layout_constraintStart_toEndOf="@+id/detail_profile_img"
+            app:layout_constraintTop_toTopOf="@+id/detail_profile_img"
+            tools:text="@tools:sample/first_names" />
+
+        <TextView
+            android:id="@+id/detail_stars_text"
+            style="@style/starsCountTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBaseline_toBaselineOf="@+id/detail_username_text"
+            app:layout_constraintEnd_toStartOf="@+id/right"
+            tools:text="1.2k" />
+
+        <ImageView
+            android:id="@+id/detail_stars_img"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="8dp"
+            android:contentDescription="@string/star_image_of_repo_description"
+            android:src="@android:drawable/btn_star_big_on"
+            app:layout_constraintBottom_toBottomOf="@+id/detail_stars_text"
+            app:layout_constraintEnd_toStartOf="@+id/detail_stars_text"
+            app:layout_constraintTop_toTopOf="@+id/detail_stars_text" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
