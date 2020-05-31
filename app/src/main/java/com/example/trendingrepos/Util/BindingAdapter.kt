@@ -31,7 +31,8 @@ fun TextView.bindUsernameText(repository: Repository) {
 
 @BindingAdapter("starsCountText")
 fun TextView.bindStarsCountText(repository: Repository) {
-    this.text = repository.stars.toString()
+    val formattedNumber = getFormattedNumber(repository.stars.toLong())
+    this.text = formattedNumber
 }
 
 @BindingAdapter("profileImage")
