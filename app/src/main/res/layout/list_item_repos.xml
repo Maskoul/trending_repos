@@ -51,6 +51,7 @@
                 android:id="@+id/repo_description_text"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:maxLines="2"
                 app:descriptionText="@{repositoryItem}"
                 app:layout_constraintEnd_toEndOf="@id/right_well"
                 app:layout_constraintStart_toStartOf="@+id/left_well"
