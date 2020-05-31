@@ -6,10 +6,10 @@
     app:startDestination="@id/overviewReposFragment">
 
     <fragment
-        tools:layout="@layout/fragment_overview_repos"
         android:id="@+id/overviewReposFragment"
         android:name="com.example.trendingrepos.ui.overview.OverviewReposFragment"
-        android:label="OverviewReposFragment" >
+        android:label="@string/overview_label"
+        tools:layout="@layout/fragment_overview_repos">
         <action
             android:id="@+id/action_overviewReposFragment_to_detailFragment"
             app:destination="@id/detailFragment" />
@@ -17,8 +17,8 @@
     <fragment
         android:id="@+id/detailFragment"
         android:name="com.example.trendingrepos.ui.detail.DetailFragment"
-        android:label="DetailFragment"
-        tools:layout="@layout/fragment_detail" >
+        android:label="@string/detail_label"
+        tools:layout="@layout/fragment_detail">
         <argument
             android:name="repository_arg"
             app:argType="com.example.trendingrepos.domain.Repository" />
