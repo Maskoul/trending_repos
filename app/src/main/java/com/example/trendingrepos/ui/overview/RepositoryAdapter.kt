@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.trendingrepos.databinding.ListItemReposBinding
 import com.example.trendingrepos.domain.Repository
 
-class RepositoryAdapter : ListAdapter<Repository, RepositoryAdapter.MyViewHolder>(DiffCallBack) {
+class RepositoryAdapter(val onClickListener: OnClickListener) : ListAdapter<Repository, RepositoryAdapter.MyViewHolder>(DiffCallBack) {
 
     companion object DiffCallBack : DiffUtil.ItemCallback<Repository>() {
         override fun areItemsTheSame(oldItem: Repository, newItem: Repository): Boolean {
@@ -28,6 +28,9 @@ class RepositoryAdapter : ListAdapter<Repository, RepositoryAdapter.MyViewHolder
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val item = getItem(position)
+        holder.itemView.setOnClickListener {
+            onClickListener.clickListener(item)
+        }
         holder.bind(item)
     }
 
@@ -39,4 +42,7 @@ class RepositoryAdapter : ListAdapter<Repository, RepositoryAdapter.MyViewHolder
         }
     }
 
+    class OnClickListener(val clickListener: (repository: Repository) -> Unit) {
+        fun onClick(repository: Repository) = clickListener(repository)
+    }
 }

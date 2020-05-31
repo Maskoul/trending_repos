@@ -1,5 +1,9 @@
 package com.example.trendingrepos.domain
 
+import android.os.Parcelable
+import kotlinx.android.parcel.Parcelize
+
+@Parcelize
 data class Repository(
     val id: Long,
     val title: String,
@@ -7,4 +11,4 @@ data class Repository(
     val profilePicture: String,
     val description: String,
     val stars: Int
-)
+) : Parcelable

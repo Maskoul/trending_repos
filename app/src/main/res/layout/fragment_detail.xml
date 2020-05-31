@@ -5,6 +5,9 @@
 
     <data>
 
+        <variable
+            name="repository"
+            type="com.example.trendingrepos.domain.Repository" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -34,6 +37,7 @@
             android:layout_marginTop="16dp"
             app:layout_constraintStart_toStartOf="@+id/left"
             app:layout_constraintTop_toTopOf="parent"
+            app:titleText="@{repository}"
             tools:text="@tools:sample/lorem" />
 
         <TextView
@@ -42,6 +46,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
+            app:descriptionText="@{repository}"
             app:layout_constraintEnd_toStartOf="@+id/right"
             app:layout_constraintStart_toStartOf="@+id/left"
             app:layout_constraintTop_toBottomOf="@+id/detail_title_text"
@@ -55,6 +60,7 @@
             android:contentDescription="@string/user_profile_picture_description"
             app:layout_constraintStart_toStartOf="@+id/left"
             app:layout_constraintTop_toBottomOf="@+id/detail_description_text"
+            app:profileImage="@{repository}"
             tools:src="@tools:sample/avatars" />
 
         <TextView
@@ -66,6 +72,7 @@
             app:layout_constraintBottom_toBottomOf="@+id/detail_profile_img"
             app:layout_constraintStart_toEndOf="@+id/detail_profile_img"
             app:layout_constraintTop_toTopOf="@+id/detail_profile_img"
+            app:usernameText="@{repository}"
             tools:text="@tools:sample/first_names" />
 
         <TextView
@@ -75,6 +82,7 @@
             android:layout_height="wrap_content"
             app:layout_constraintBaseline_toBaselineOf="@+id/detail_username_text"
             app:layout_constraintEnd_toStartOf="@+id/right"
+            app:starsCountText="@{repository}"
             tools:text="1.2k" />
 
         <ImageView
