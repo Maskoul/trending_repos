@@ -3,12 +3,12 @@ package com.example.trendingrepos.repository
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.Transformations
-import com.example.trendingrepos.Util.getTimeQuery
 import com.example.trendingrepos.database.RepositoryRoomDatabase
 import com.example.trendingrepos.database.asDomainModel
 import com.example.trendingrepos.domain.Repository
 import com.example.trendingrepos.network.Network
 import com.example.trendingrepos.network.asDatabaseModel
+import com.example.trendingrepos.util.getTimeQuery
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
