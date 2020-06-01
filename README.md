@@ -28,7 +28,6 @@ Libraries Used
 * Third party
   * [Glide][90] for image loading
   * [Kotlin Coroutines][91] for managing background threads with simplified code and reducing needs for callbacks
-  * [Kotlin Coroutines][92] Joda time library for dealing with time.
   * [Joda-Time][92] for dealing with time.
   * [Moshi][93] for parsing json format.
   * [Retrofit][94] A type-safe HTTP client for Android and Java.
