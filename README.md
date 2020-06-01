@@ -1,6 +1,10 @@
 # trending_repos
 A simple app shows a the most stars repositories on github in the last 30 days.
 
+ <img src="screenshots/Screenshot%201.jpg" width="300"> <img src="screenshots/Screenshot%202.jpg" width="300">
+
+
+ 
 Libraries Used
 --------------
 * [Foundation][0] - Components for core system capabilities, Kotlin extensions and support for
@@ -49,3 +53,9 @@ Libraries Used
 [92]: https://github.com/JodaOrg/joda-time
 [93]: https://github.com/square/moshi/
 [94]: https://square.github.io/retrofit/
+
+## Architecture
+This app uses [***MVVM (Model View View-Model)***](https://developer.android.com/jetpack/docs/guide#recommended-app-arch) architecture.
+
+![](https://developer.android.com/topic/libraries/architecture/images/final-architecture.png)
+
